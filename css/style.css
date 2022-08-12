@@ -1,0 +1,1012 @@
+/** default **/
+
+* {
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    font-family: 'Raleway';
+    font-weight: 600;
+}
+
+
+
+body {
+    margin: 0 2rem 0 2rem;
+}
+
+nav {
+    width: 100%;
+    min-height: 10vh;
+    line-height: 80px;
+}
+
+footer {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    margin-bottom: 0;
+}
+
+/** Boutons navigation + animations **/
+a {
+    position: relative;
+
+}
+
+.HostingSection {
+    display: flex;
+    min-width: 100%;
+}
+
+/** Cards (image + body) **/
+.dispositionCard {
+    display: flex;
+    flex-direction: row;
+}
+
+.popularCardContainer {
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(237, 237, 237);
+}
+
+.hostContainer {
+    display: grid;
+    gap: 2rem;
+    grid-auto-rows: 15rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+}
+
+.card,
+.card-v {
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0px 5px 20px #999;
+    flex-wrap: wrapp;
+}
+
+.StarRating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: sticky;
+    bottom: 0px;
+}
+
+.card {
+    min-width: 40%;
+    max-width: 100%;
+    min-height: 70%;
+    max-height: 100%;
+    overflow: hidden;
+    padding: 0.3rem;
+}
+
+.card-v {
+    min-width: 90%;
+    max-width: 100%;
+    min-height: 80%;
+    max-height: 160px;
+    overflow: hidden;
+    padding: 0.25rem 0 0.25rem 0.25rem;
+    margin: 1rem;
+}
+
+.card-title h3 {
+    line-height: 1rem;
+    hyphens: auto;
+}
+
+.card a,
+.card-v a {
+    color: #333;
+    text-decoration: none;
+}
+
+.card:hover,
+.card-v:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+.endStar {
+    flex-direction: row;
+    justify-content: end;
+}
+
+.card-image {
+    min-width: 100%;
+    min-height: 100px;
+    border-radius: 1rem 1rem 0 0;
+    position: relative;
+}
+
+.card-v-image {
+    min-width: 35%;
+    max-width: 130px;
+    min-height: 110px;
+    max-height: 95%;
+    border-radius: 1rem 0 0 1rem;
+    position: relative;
+
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+    position: absolute;
+    transition-property: filter width;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.card-v-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+    object-fit: cover;
+    position: absolute;
+    transition-property: filter width;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.card-body {
+    max-height: fit-content;
+    line-height: 0.75rem;
+    padding: 0.25rem;
+    box-sizing: border-box;
+}
+
+.card-v-body {
+    line-height: 0.25rem;
+    padding: 0.25rem 0.25rem 0.25rem;
+    box-sizing: border-box;
+}
+
+.hiddenIcon {
+    visibility: hidden;
+}
+
+.flexNav a {
+    text-decoration-style: none;
+}
+
+/* image logo */
+.logoNav {
+    margin-top: 2rem;
+    width: 200px;
+    height: auto;
+}
+
+.flexContainer {
+    display: flex;
+}
+
+
+/* Création de l'animation */
+.buttonConfig::after {
+    content: '';
+    transform-origin: 1 1;
+    transform: scaleX(0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: .3em;
+    background: #1640f8;
+    z-index: -1;
+    opacity: 0.8;
+    transition: transform 1s;
+}
+
+/* animation remplissage de l'animation */
+.buttonConfig:hover::after {
+    transform: scaleX(1);
+}
+
+/** Création Input + Personnalisation **/
+/* Bouton recherche */
+.buttonSearch {
+    height: 50px;
+    width: 100px;
+    background: rgb(0, 140, 255);
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.ButtonMore>a {
+    color: #202122;
+    text-decoration: none;
+}
+
+/* input */
+.Searching {
+    height: 50px;
+    width: 300px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+/* décalage input (valeurs) */
+.paddingSearch {
+    padding-left: 20px;
+}
+
+.borderSearch {
+    width: 450px;
+    border-radius: 10px;
+    border: 0.5px solid #f2f2f2;
+}
+
+.hiddenWord {
+    margin-left: 15px;
+}
+
+/** Filtres **/
+.filter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 50px 30px 10px;
+}
+
+.fliterTitle {
+    margin-right: 20px;
+}
+
+.filterTextIcon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #f2f2f2;
+    height: 50px;
+    border-radius: 30px;
+    margin-right: 0.75rem;
+}
+
+/* Création de la zone ronde -> icone. */
+.filterIcon {
+    border-radius: 25px;
+    min-width: 52px;
+    width: 52px;
+    height: 52px;
+    color: #0065fc;
+    background-color: #e3eeff;
+}
+
+/* Espace les mot des bordures. */
+.margText {
+    margin: 0 1rem;
+}
+
+/* Décalage du bouton lors de son survol. */
+.filterTextIcon:hover {
+    cursor: pointer;
+    transform: translate(0, -10%);
+    transition-duration: .5s;
+}
+
+/* effet sur la zone de l'icone lors du survol du bouton. */
+.filterTextIcon:hover>.filterIcon {
+    background-color: #0a5faf;
+    color: aliceblue;
+}
+
+/** Apparences **/
+/* Apparence bouton nav */
+.buttonConfig {
+    text-decoration: none;
+    text-decoration-color: black;
+}
+
+/* couleurs icones */
+.starBlue {
+    color: #1640f8;
+}
+
+.greyBg {
+    background: #e6e7e8;
+}
+
+.starGrey {
+    color: #c2baba;
+}
+
+/* couleurs grise bg */
+
+
+.BgHostingContainer {
+    background: rgb(236, 236, 236);
+}
+
+/* couleur bleue bg*/
+.blueBg {
+    background: rgb(48, 46, 170);
+}
+
+/* Bordure personnalisée grise */
+
+/* Apparence icones */
+.iconSize {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px 0 0 10px;
+}
+
+.icon-box {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid #f2f2f2;
+    line-height: 1;
+    color: blue;
+}
+
+/* apparence curseur */
+.pointer {
+    cursor: pointer;
+}
+
+/* suppression des bordures */
+.noBorder {
+    border: none;
+}
+
+/* Annule apparence de boutons */
+.noDecoration {
+    text-decoration: none;
+}
+
+/** Règles de Disposition (flexbox) **/
+/* Centre mes éléments */
+.End {
+    text-align: end;
+}
+
+/* Flex -> Space-around */
+.flexAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Flex -> space-between */
+.flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexSection {
+    display: flex;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.spaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Margin {
+    margin: 3px;
+    padding: 0;
+}
+
+.hostingContainer {
+    padding: 2rem;
+}
+
+.flex1 {
+    flex: 33%
+}
+
+
+/* Centre du texte verticalement*/
+.textAlign {
+    line-height: 1;
+    text-align: center;
+}
+
+.Spacing {
+    margin-left: 10px;
+}
+
+.Spacing25 {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.footerRules {
+    min-width: 768px;
+    max-width: 1200px;
+    bottom: 0;
+    margin-top: 25px;
+}
+
+.Wrapping {
+    flex-wrap: wrap;
+}
+
+
+
+
+.popularImage {
+    border-radius: 15px 0 0 15px;
+}
+
+.titleContainer {
+    min-width: 40%;
+    max-width: 75%;
+    padding: 0 25px;
+}
+
+.TitleDisposition {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardTitle {
+    padding-left: .05rem;
+}
+
+.ratingComponent {
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.StarPopular {
+    max-width: 40%;
+    min-width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cardHostTitle {
+    margin-top: 50px;
+    line-height: 5px;
+    margin-left: 15px;
+}
+
+.hostImage {
+    border-radius: 15px 15px 0 0;
+}
+
+.iconBottom {
+    margin-top: 10px;
+}
+
+.CardContainer {
+    height: 580px;
+}
+
+.cardHosting {
+    max-width: 300px;
+    max-height: 220px;
+    margin-top: 25px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 5px 20px #999;
+}
+
+.container {
+    min-width: 200px;
+    max-width: 66%;
+    height: auto;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.popularContainer {
+    background: rgb(236, 236, 236);
+    min-width: 20rem;
+    max-width: 33%;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.buttonConfig {
+    width: 20vw;
+    height: 100px;
+    text-align: center;
+}
+
+/************** FOOTER ****************/
+
+.footerList {
+    padding: 0;
+    list-style-type: none;
+}
+
+.footerList> {
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.footerStyle {
+    background: rgb(236, 236, 236);
+}
+
+.ListGroup {
+    flex: 1;
+    margin-left: 25px;
+}
+
+.flexFooter a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flexFooter li {
+    line-height: 30px;
+}
+
+.flexFooter {
+    background: rgb(236, 236, 236);
+    display: flex;
+}
+
+.buttonFooter {
+    margin-top: 100px;
+}
+
+.filterTitle {
+    padding-right: 2rem;
+}
+
+.ActContainer {
+    min-height: 600px;
+    max-height: auto;
+    min-width: 678px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleActContainer {
+    justify-content: flex-start;
+}
+
+.ActCards {
+    min-width: 90%;
+    max-width: 100%;
+    min-height: fit-content;
+    max-height: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.actCardContainer {
+    padding: 1rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 500px;
+}
+
+.card-act,
+.card-act-flex {
+    border-radius: 1rem;
+    min-width: 90%;
+    height: 500px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px #999;
+}
+
+.card-act-flex {
+    margin: 1rem 0 0 0 ;
+
+}
+
+.card-act:hover,
+.card-act-flex:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-act a,
+.card-act-flex a {
+    text-decoration: none;
+}
+
+.card-act-image,
+.card-act-flex-image {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+}
+
+.card-act-flex-image {
+    height: 80%;
+}
+
+.card-act-image {
+    height: 85%;
+}
+
+.card-act-image img,
+.card-act-flex-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-act-title h3 {
+    margin: 1rem;
+    color: #202122;
+    text-decoration-style: none;
+}
+
+/********************  On Mobile Screen  **************/
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        margin-left: 2rem;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /**  Header mobile screen  **/
+    .hostContainer {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-rows: auto;
+      
+    }
+
+    .BgHostingContainer {
+        background: none;
+    }
+
+    .popularContainer {
+        background: rgb(236, 236, 236);
+        min-width: 100%;
+        border-radius: 10px;
+        margin: 0 -2rem;
+        padding: 2rem;
+    }
+
+
+    .card{
+        min-width: 100%;
+    }
+    .card-v {
+        min-width: 90%;
+        max-width: 100%;
+        min-height: 100px;
+        max-height: 250px;
+        overflow: hidden;
+        padding: 0.25rem 0 0.25rem 0.25rem;
+        margin: 1rem;
+    }
+
+    .card-v-image {
+        min-width: 35%;
+        max-width: 130px;
+        min-height: 100%;
+        max-height: 100%;
+        border-radius: 1rem 0 0 1rem;
+        position: relative;
+
+    }
+
+    .card-v-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem 0 0 1rem;
+        object-fit: cover;
+        position: absolute;
+        transition-property: filter width;
+        transition-duration: 2s;
+        transition-timing-function: ease;
+    }
+
+    .ActCards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-act, .card-act-flex {
+        min-width: 40%;
+        max-width: 55%;
+        min-height: 200px;
+        max-height: 250px;
+        margin-top: 2rem;
+    }
+
+    .card-act-flex-image, .card-act-image {
+        min-width: 80%;
+        height: 80%;
+    }
+   
+    .HostingSection {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flexNav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .flexTitle {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .hiddenWord {
+        display: none;
+    }
+
+    .hiddenIcon {
+        visibility: visible;
+    }
+
+    img {
+        display: flex;
+        align-content: center;
+        margin: auto;
+    }
+
+    .logoNav {
+        width: 150px;
+        height: auto;
+    }
+
+    .container {
+        width: 500px;
+        height: auto;
+        border-radius: 10px;
+        margin: 15px 25px 15px 25px;
+    }
+
+    /** Filtres **/
+
+    .filter {
+        display: flex;
+        align-items: center;
+    }
+
+    /** Nav mobile screen **/
+
+    /* Apparence Barre de navigation */
+    nav {
+        width: 100%;
+        min-height: 10vh;
+        line-height: 80px;
+    }
+
+    /* Boutons NavBar noir sans décoration */
+    .buttonConfig {
+        width: 50vw;
+        height: 100px;
+        text-align: center;
+    }
+
+    /* écriture en gras */
+    .boldText {
+        font-weight: bolder;
+    }
+
+
+    /**  Main mobile screen **/
+    
+    
+    
+    
+    .buttonSearch {
+        height: 50px;
+        width: 50px;
+        background: rgb(0, 140, 255);
+        color: white;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    /* input */
+    .Searching {
+        height: 50px;
+        width: 300px;
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .borderSearch {
+        width: 400px;
+        border-radius: 10px;
+        border: 0.5px solid #f2f2f2;
+    }
+
+    .block {
+        display: block;
+    }
+
+    /** Footer Mobile Screen **/
+
+    .ListGroup {
+        padding-left: 3rem;
+    }
+
+    .flexFooter {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*******************  On Tablet Screen  ******************/
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+
+    .hostContainer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+
+
+    .flexSection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flexHead {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flexHosting {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container {
+        max-width: 750px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .logoNav {
+        width: 160px;
+    }
+
+    .flexNav {
+        display: flex;
+        justify-content: end;
+    }
+
+    .flexNav a {
+        width: 200px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration-style: none;
+    }
+
+    .buttonConfig::after {
+        content: '';
+        transform-origin: 1 1;
+        transform: scaleX(0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: .3em;
+        background: #1640f8;
+        z-index: -1;
+        opacity: 0.8;
+        transition: transform 1s;
+    }
+
+    /**  Header Tablet screen  **/
+
+    /**  Body Tablet screen **/
+    /* couleur grise */
+
+    /** Main Tablet screen **/
+
+    /** Footer Tablet Screen **/
+    .footerRules {
+        min-width: 800px;
+
+    }
+}
+
+/*****************************  On Pc Screen  **************************/
+
+@media only screen and (min-width: 992px) {
+
+    /**  Header pc screen  **/
+
+
+    .flexHead {
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container {
+        min-width: 600px;
+        max-width: 950px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+
+    .logoNav {
+        width: 160px;
+    }
+
+    .flexNav {
+        display: flex;
+        justify-content: end;
+    }
+
+    .flexNav a {
+        width: 200px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration-style: none;
+    }
+
+    .buttonConfig::after {
+        content: '';
+        transform-origin: 1 1;
+        transform: scaleX(0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: .3em;
+        background: #1640f8;
+        z-index: -1;
+        opacity: 0.8;
+        transition: transform 1s;
+    }
+
+    /**  Body pc screen **/
+    /* couleur grise */
+
+    /** Main pc screen **/
+
+    /** Footer pc Screen **/
+
+}

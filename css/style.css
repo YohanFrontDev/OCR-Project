@@ -5,13 +5,16 @@
     width: auto;
     height: auto;
     font-family: 'Raleway';
-    font-weight: 600;
+    font-weight: 500;
 }
 
-
+h3, h2, h1 ,.boldText{
+    font-family: 'Raleway';
+    font-weight: 700;
+}
 
 body {
-    margin: 0 2rem 0 2rem;
+    margin: 0 3rem 0 3rem;
 }
 
 nav {
@@ -32,6 +35,11 @@ a {
 
 }
 
+.flexHead {
+    max-width: 100%;
+    max-height: 100px;
+    
+}
 .HostingSection {
     display: flex;
     min-width: 100%;
@@ -60,7 +68,9 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: auto;
 }
-
+.spanFilter{
+    margin-top: 2rem;
+}
 .card,
 .card-v {
     border-radius: 1rem;
@@ -98,6 +108,7 @@ a {
 }
 
 .card-title h3 {
+    
     line-height: 1rem;
     hyphens: auto;
 }
@@ -120,17 +131,17 @@ a {
 }
 
 .card-image {
-    min-width: 100%;
+    min-width:250px;
     min-height: 100px;
     border-radius: 1rem 1rem 0 0;
     position: relative;
 }
 
 .card-v-image {
-    min-width: 35%;
+    min-width: 50%;
     max-width: 130px;
-    min-height: 110px;
-    max-height: 95%;
+    min-height: 130px;
+    max-height: 140px;
     border-radius: 1rem 0 0 1rem;
     position: relative;
 
@@ -161,7 +172,7 @@ a {
 .card-body {
     max-height: fit-content;
     line-height: 0.75rem;
-    padding: 0.25rem;
+    padding:0 0.25rem;
     box-sizing: border-box;
 }
 
@@ -181,8 +192,8 @@ a {
 
 /* image logo */
 .logoNav {
-    margin-top: 2rem;
-    width: 200px;
+    margin-top: 3rem;
+    width: 100px;
     height: auto;
 }
 
@@ -257,29 +268,24 @@ a {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding: 30px 50px 30px 10px;
-}
-
-.fliterTitle {
-    margin-right: 20px;
+    margin: 2rem 0;
 }
 
 .filterTextIcon {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid #f2f2f2;
-    height: 50px;
-    border-radius: 30px;
+    border: 2px solid #d9d9d9;
+    height: 53px;
+    border-radius: 32px;
     margin-right: 0.75rem;
 }
 
 /* Création de la zone ronde -> icone. */
 .filterIcon {
     border-radius: 25px;
-    min-width: 52px;
-    width: 52px;
-    height: 52px;
+    width: 55px;
+    height: 55px;
     color: #0065fc;
     background-color: #e3eeff;
 }
@@ -344,11 +350,10 @@ a {
 }
 
 .icon-box {
-    width: 25px;
-    height: 25px;
+    width: 1.6rem;
+    height: 1.6rem;
     border-radius: 50%;
-    border: 3px solid #f2f2f2;
-    line-height: 1;
+    border: 2px solid #dedede;
     color: blue;
 }
 
@@ -407,11 +412,14 @@ a {
     justify-content: space-between;
 }
 
-.Margin {
-    margin: 3px;
-    padding: 0;
+.Taginfo {
+    padding-top: 1rem 
 }
 
+.spacingText{
+    padding-top: 0.2rem;
+    padding-left: 1rem;
+}
 .hostingContainer {
     padding: 2rem;
 }
@@ -423,7 +431,7 @@ a {
 
 /* Centre du texte verticalement*/
 .textAlign {
-    line-height: 1;
+    padding-top: 0.1rem;
     text-align: center;
 }
 
@@ -522,7 +530,7 @@ a {
     background: rgb(236, 236, 236);
     min-width: 20rem;
     max-width: 33%;
-    border-radius: 10px;
+    border-radius: 1.5rem;
     margin: 2rem;
     padding: 2rem;
 }
@@ -586,6 +594,7 @@ a {
 }
 
 .titleActContainer {
+    padding-left: 1rem;
     justify-content: flex-start;
 }
 
@@ -621,7 +630,7 @@ a {
 }
 
 .card-act-flex {
-    margin: 1rem 0 0 0 ;
+    margin: 1rem 0 0 0;
 
 }
 
@@ -677,7 +686,7 @@ a {
     .hostContainer {
         grid-template-columns: repeat(1, minmax(0, 1fr));
         grid-template-rows: auto;
-      
+
     }
 
     .BgHostingContainer {
@@ -687,15 +696,15 @@ a {
     .popularContainer {
         background: rgb(236, 236, 236);
         min-width: 100%;
-        border-radius: 10px;
-        margin: 0 -2rem;
-        padding: 2rem;
-    }
+        border-radius: unset;
+        padding: 1rem;
+     }
 
 
-    .card{
+    .card {
         min-width: 100%;
     }
+
     .card-v {
         min-width: 90%;
         max-width: 100%;
@@ -726,13 +735,34 @@ a {
         transition-duration: 2s;
         transition-timing-function: ease;
     }
-
-    .ActCards{
+    .ActContainer {
+        min-height: 80%;
+        max-height: 100%;
+        min-width: 80%;
+        max-width: 100%;
         display: flex;
         flex-direction: column;
+justify-content: center;    }
+
+    .ActCards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-act, .card-act-flex{
+        width: auto;
+        min-height: 1000px;
+    }
+    .actCardContainer {
+        padding: 3rem;
+        min-width: 80%;
+        max-width: 100%;
+        padding: 0.1rem;
     }
 
-    .card-act, .card-act-flex {
+    .card-act,
+    .card-act-flex {
         min-width: 40%;
         max-width: 55%;
         min-height: 200px;
@@ -740,17 +770,30 @@ a {
         margin-top: 2rem;
     }
 
-    .card-act-flex-image, .card-act-image {
+    .card-act-flex-image,
+    .card-act-image {
         min-width: 80%;
         height: 80%;
     }
-   
+
     .HostingSection {
         display: flex;
         flex-direction: column-reverse;
+        align-items: center;
     }
 
+    .filter {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    .filterTitle {
+        width: 100vw;
+    }
+
+    .filterTextIcon{
+        margin: 0.3rem;
+    }
 
     .flexContainer {
         display: flex;
@@ -791,10 +834,10 @@ a {
     }
 
     .container {
-        width: 500px;
+        max-width: 100%;
+        max-height: 80%;
         height: auto;
         border-radius: 10px;
-        margin: 15px 25px 15px 25px;
     }
 
     /** Filtres **/
@@ -821,16 +864,14 @@ a {
     }
 
     /* écriture en gras */
-    .boldText {
-        font-weight: bolder;
-    }
+    
 
 
     /**  Main mobile screen **/
-    
-    
-    
-    
+
+
+
+
     .buttonSearch {
         height: 50px;
         width: 50px;
@@ -874,6 +915,17 @@ a {
 /*******************  On Tablet Screen  ******************/
 @media only screen and (max-width: 992px) and (min-width: 768px) {
 
+    .HostingSection {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
     .hostContainer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: auto;
@@ -886,6 +938,8 @@ a {
     }
 
     .flexHead {
+        max-width: 1200px;
+        max-height: 100px;
         display: flex;
         flex-direction: row;
     }
@@ -901,8 +955,9 @@ a {
         border-radius: 10px;
     }
 
-    .logoNav {
-        width: 160px;
+    img .logoNav {
+        width: 100px;
+        height: auto;
     }
 
     .flexNav {
@@ -962,15 +1017,10 @@ a {
     }
 
     .container {
-        min-width: 600px;
-        max-width: 950px;
+        min-width: 900px;
+        max-width: 1100px;
         height: auto;
-        border-radius: 10px;
-    }
-
-
-    .logoNav {
-        width: 160px;
+        border-radius: 1.5rem;
     }
 
     .flexNav {
@@ -979,7 +1029,7 @@ a {
     }
 
     .flexNav a {
-        width: 200px;
+        width: 140px;
         height: 150px;
         display: flex;
         justify-content: center;
